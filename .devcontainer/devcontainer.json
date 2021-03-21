@@ -8,11 +8,10 @@
     "settings": {
         "terminal.integrated.shell.linux": "/bin/bash",
         "git.autofetch": true,
-    }
+    },
 
     // Add the IDs of VS Code extensions you want installed when the container is created in the array below.
-    // "extensions": [
-    //     "dbaeumer.vscode-eslint",
-    //     "esbenp.prettier-vscode"
-    // ]
+    "extensions": [
+        "ms-dotnettools.csharp"
+    ]
 }
