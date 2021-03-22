@@ -1,5 +1,9 @@
 {
-    "name": "Meeting tracker",
+    "name": "DotNet Server",
+
+    "build": {
+		"dockerfile": "Dockerfile"
+	},
 
     // Use 'forwardPorts' to create a container with published ports.
     "forwardPorts": [5000],
