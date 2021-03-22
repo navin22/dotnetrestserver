@@ -1,9 +1,11 @@
-FROM mcr.microsoft.com/vscode/devcontainers/universal:1-linux
+  
+FROM mcr.microsoft.com/vscode/devcontainers/universal:linux
 
-# ** [Optional] Uncomment this section to install additional packages. **
-USER root
+# Avoid warnings by switching to noninteractive
+ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y install --no-install-recommends mysql-server
+# Configure apt and install packages
+RUN sudo apt-get install mysql-server
 
-USER codespace
+# Switch back to dialog for any ad-hoc use of apt-get
+ENV DEBIAN_FRONTEND=dialog
